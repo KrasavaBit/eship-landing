@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домен eship.ru продается</title>
+    <meta name="description" content="Премиальное доменное имя eship.ru доступно для приобретения. Идеальный актив для транспортной логистики, 3PL-провайдеров, морского фрахта и кросс-бордерной электронной коммерции.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0B192C;
+            --bg-depth: #092E42;
+            --bg-card: #16243A;
+            --text-frost: #F0F4F8;
+            --text-muted: rgba(240, 244, 248, 0.7);
+            --accent-ocean: #4A8CA2;
+            --accent-teal: #00B4D8;
+            --shadow-obsidian: #3C3033;
+            --glass-border: rgba(240, 244, 248, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Golos Text', sans-serif;
+            background: radial-gradient(circle at top right, var(--bg-depth), var(--bg-deep));
+            background-attachment: fixed;
+            color: var(--text-frost);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(0, 180, 216, 0.1);
+            border: 1px solid var(--accent-teal);
+            border-radius: 100px;
+            color: var(--accent-teal);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff, var(--accent-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-desc {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+
+        .pricing-box {
+            background: rgba(22, 36, 58, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 8px 32px rgba(60, 48, 51, 0.2);
+            display: inline-block;
+        }
+
+        .pricing-text {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-subtext {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent-ocean);
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-teal);
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(0, 180, 216, 0.3);
+        }
+
+        /* Potential Section */
+        .potential {
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 4rem;
+            font-weight: 700;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .card {
+            background: rgba(22, 36, 58, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+            box-shadow: 0 8px 32px rgba(60, 48, 51, 0.2);
+            opacity: 0;
+            transform: translateY(30px);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(60, 48, 51, 0.4);
+            border-color: rgba(0, 180, 216, 0.3);
+        }
+
+        .card:active {
+            transform: translateY(-2px) scale(0.98);
+            box-shadow: 0 4px 16px rgba(60, 48, 51, 0.3);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-teal);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-frost);
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 8rem 0;
+            background: rgba(11, 25, 44, 0.8);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(22, 36, 58, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 8px 32px rgba(60, 48, 51, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(11, 25, 44, 0.5);
+            border: 1px solid var(--glass-border);
+            border-radius: 0.5rem;
+            color: var(--text-frost);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+            background: rgba(11, 25, 44, 0.8);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-top: auto;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { padding: 4rem 0; }
+            .pricing-box { padding: 1.5rem; }
+            .potential { padding: 4rem 0; }
+            .contact { padding: 4rem 0; }
+            .contact-form { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-badge">Премиальный цифровой актив</div>
+            <h1 class="hero-title">eship.ru</h1>
+            <p class="hero-desc">Эксклюзивное доменное имя для лидеров рынка электронной коммерции и глобальной логистики.</p>
+            
+            <div class="pricing-box">
+                <div class="pricing-text">Цена: 7 550 000 ₽</div>
+                <div class="pricing-subtext">Готовы рассмотреть встречные предложения от профильных компаний</div>
+            </div>
+            
+            <div>
+                <a href="#contact" class="btn-primary">Обсудить приобретение</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Potential Section -->
+    <section class="potential" id="potential">
+        <div class="container">
+            <h2 class="section-title">Стратегический потенциал<br>Идеи для бизнеса на домене eship.ru</h2>
+            
+            <div class="grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-icon">📦</div>
+                    <h3 class="card-title">Логистика и маркетплейсы</h3>
+                    <p class="card-desc">Идеальная платформа для интеграции B2B решений. Оптимально подходит для компаний, чья специализация — <strong>транспортная логистика</strong>, передовая <strong>складская логистика</strong> и эффективная <strong>возвратная логистика (reverse logistics)</strong>. Короткий домен укрепит бренд любого национального <strong>3PL-провайдера</strong>.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-icon">🚢</div>
+                    <h3 class="card-title">Трансграничный морской фрахт</h3>
+                    <p class="card-desc">Глобальное имя для международных операторов. Подчеркните масштаб бизнеса, предлагая <strong>международные контейнерные перевозки</strong> и надежный <strong>морской фрахт</strong>. Ассоциация с морем (ship) создает мгновенное доверие у корпоративных клиентов и портовых служб по всему миру.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-icon">🛥️</div>
+                    <h3 class="card-title">Индустрия яхтинга и катеров</h3>
+                    <p class="card-desc">Престижный цифровой адрес для элитного сегмента. Домен прекрасно подойдет под проект, где осуществляется <strong>аренда премиальных яхт</strong> или <strong>продажа катеров</strong>. Также это отличная площадка для компаний, поставляющих высокотехнологичное <strong>оборудование для судостроения</strong>.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="card-icon">⚓</div>
+                    <h3 class="card-title">B2C Хобби и ритейл</h3>
+                    <p class="card-desc">Уникальная ниша для увлеченной аудитории. Разверните специализированный маркетплейс, где представлен профессиональный <strong>судомоделизм</strong>, радиоуправляемые модели и аксессуары. Домен eship.ru обеспечит мощный старт для проектов, нацеленных на <strong>кросс-бордерную электронную коммерцию</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 2rem;">Связь с владельцем</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Оставьте свои контактные данные и предложение. Мы свяжемся с вами в кратчайшие сроки для обсуждения деталей сделки.
+            </p>
+
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="a1bab3d5-30c3-495e-ac0a-4bd020f73d26">
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <div class="form-group">
+                    <label class="form-label" for="name">Ваше имя / Название компании</label>
+                    <input type="text" id="name" name="name" class="form-control" required placeholder="ООО Логистика">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">Корпоративный Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required placeholder="ceo@company.com">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Контактный телефон</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (999) 000-00-00">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="message">Коммерческое предложение / Комментарий</label>
+                    <textarea id="message" name="message" class="form-control" required placeholder="Опишите ваше предложение и примерные сроки проведения сделки..." rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Отправить коммерческое предложение</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 eship.ru. Все права защищены. Премиальный домен выставлен на продажу.</p>
+        </div>
+    </footer>
+
+    <!-- Minimal JS for Scroll Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // Staggered animation effect
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
